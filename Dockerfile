@@ -7,7 +7,7 @@ ENV LANG C.UTF-8
 
 # Utilities
 RUN apt-get update -q
-RUN apt-get install -yq wget unzip bzip2 git
+RUN apt-get install -yq wget unzip bzip2 git build-essential
 
 # Install conda
 RUN wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda3.sh
