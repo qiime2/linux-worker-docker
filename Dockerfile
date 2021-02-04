@@ -1,5 +1,5 @@
 # Use tini as PID 1 to handle signals safely
-FROM krallin/ubuntu-tini:xenial
+FROM quay.io/qiime2/ubuntu-tini:xenial
 
 # Locale for click
 ENV LC_ALL C.UTF-8
