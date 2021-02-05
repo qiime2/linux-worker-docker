@@ -20,6 +20,7 @@ RUN /opt/miniconda3/bin/conda install -yq conda-build
 
 # Install any other goodies
 RUN /opt/miniconda3/bin/conda run pip install -q https://github.com/qiime2/q2lint/archive/master.zip
+RUN /opt/miniconda3/bin/conda install -yq -c conda-forge nodejs
 
 # Set conda environment
 RUN echo "export PATH=/opt/miniconda3/bin:$PATH" > /etc/profile
