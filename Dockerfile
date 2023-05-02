@@ -1,5 +1,4 @@
-# Use tini as PID 1 to handle signals safely
-FROM quay.io/qiime2/ubuntu-tini:xenial
+FROM ubuntu:22.04
 
 # Locale for click
 ENV LC_ALL C.UTF-8
@@ -19,7 +18,6 @@ RUN /opt/miniconda3/bin/conda update -yq conda
 RUN /opt/miniconda3/bin/conda install -yq conda-build
 
 # Install any other goodies
-RUN true  # cache-busting 2021.03.09 - remove me next time you see me
 RUN /opt/miniconda3/bin/conda run pip install -q https://github.com/qiime2/q2lint/archive/master.zip
 RUN /opt/miniconda3/bin/conda install -yq -c conda-forge nodejs
 
